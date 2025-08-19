@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -13,8 +15,15 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 79 70 229;
+    --primary-foreground: 255 255 255;
+
+    /* Analytics colors */
+    --blue-gradient: linear-gradient(135deg, rgb(79 70 229), rgb(124 58 237));
+    --success: 16 185 129;
+    --warning: 245 158 11;
+    --danger: 239 68 68;
+    --info: 59 130 246;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -96,6 +105,36 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Inter',sans-serif];
+  }
+
+  .gradient-blue {
+    background: linear-gradient(135deg, rgb(79 70 229), rgb(124 58 237));
+  }
+
+  .text-success {
+    color: rgb(16 185 129);
+  }
+  .text-warning {
+    color: rgb(245 158 11);
+  }
+  .text-danger {
+    color: rgb(239 68 68);
+  }
+  .text-info {
+    color: rgb(59 130 246);
+  }
+
+  .bg-success {
+    background-color: rgb(16 185 129);
+  }
+  .bg-warning {
+    background-color: rgb(245 158 11);
+  }
+  .bg-danger {
+    background-color: rgb(239 68 68);
+  }
+  .bg-info {
+    background-color: rgb(59 130 246);
   }
 }
